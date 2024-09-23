@@ -1,0 +1,83 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.wrapper{
+    /* global 94%+ browsers support */
+    background: linear-gradient(90deg, rgb(240, 66, 127) 0%, rgba(125, 151, 60, 0.77) 25%, rgb(25, 85, 214) 50%, rgb(218, 25, 57) 100%);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.game-info{
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 3rem;
+    border-radius: 15px;
+    position:absolute;
+    top:3rem;
+    left:50%;
+    transform: translate(-50%);
+}
+
+.tic-tac-toe{
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    width:90%;
+    max-width:20rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 2rem;
+    aspect-ratio: 1/1;
+}
+
+.box{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+.box1,.box2,.box4,.box5{
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+.box3,.box6{
+    border-bottom: 2px solid white;
+}
+.box7,.box8{
+    border-right: 2px solid white;
+}
+
+.btn{
+    
+    color: white;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 2rem;
+    display: none;
+    position: absolute;
+    bottom:3rem;
+    left:50%;
+    transform: translate(-50%);
+}
+.btn.active{
+    display: flex;
+}
+.win{
+    background-color: rgba(0, 255, 0, 0.3);
+}
